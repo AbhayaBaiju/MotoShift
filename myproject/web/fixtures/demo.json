@@ -1,0 +1,32 @@
+[
+  {
+    "model": "web.shipment",
+    "pk": 1,
+    "fields": {
+      "tracking_id": "MOT-48291",
+      "bike_model": "Royal Enfield Classic 350",
+      "origin": "Bengaluru",
+      "destination": "Hyderabad",
+      "status": "in_transit",
+      "progress": 62,
+      "eta_hours": 11,
+      "last_hub": "Kurnool",
+      "insured": true
+    }
+  },
+  {
+    "model": "web.shipment",
+    "pk": 2,
+    "fields": {
+      "tracking_id": "MOT-11004",
+      "bike_model": "Ather 450X",
+      "origin": "Pune",
+      "destination": "Mumbai",
+      "status": "ofd",
+      "progress": 88,
+      "eta_hours": 3,
+      "last_hub": "Thane",
+      "insured": true
+    }
+  }
+]

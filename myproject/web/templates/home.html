@@ -1,0 +1,280 @@
+{% extends "base.html" %}
+{% block body %}
+<header id="nav" class="fixed inset-x-0 top-0 z-50 transition-all duration-300">
+  <div class="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
+    <a href="#top" class="flex items-center gap-2 font-display text-lg font-extrabold tracking-tight text-white">
+      <span class="logo-mark grid h-9 w-9 place-items-center rounded-xl bg-ember-500 text-ink-900 shadow-glow">M</span>
+      MotoShift
+    </a>
+    <nav class="hidden items-center gap-8 text-sm text-slate-300 md:flex">
+      <a class="hover:text-white" href="#gap">Market gap</a>
+      <a class="hover:text-white" href="#features">Features</a>
+      <a class="hover:text-white" href="#competitors">Competitors</a>
+      <a class="hover:text-white" href="#track">Track</a>
+    </nav>
+    <a href="#quote" class="rounded-full bg-ember-500 px-4 py-2 text-sm font-semibold text-ink-900 transition hover:bg-ember-400">Get a quote</a>
+  </div>
+</header>
+<main id="top">
+  <section class="relative overflow-hidden pt-28 md:pt-32">
+    <div class="hero-orb" aria-hidden="true"></div>
+    <div class="mx-auto grid max-w-6xl items-center gap-12 px-5 pb-20 md:grid-cols-2">
+      <div class="reveal">
+        <p class="mb-4 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs uppercase tracking-[0.2em] text-ember-400">
+          India · Two-wheelers only
+        </p>
+        <h1 class="font-display text-4xl font-extrabold leading-[1.05] text-white md:text-6xl">
+          Shift your bike.<br />Not your weekend.
+        </h1>
+        <p class="mt-5 max-w-xl text-lg text-slate-400">
+          Doorstep pickup, 360° digital pre-inspection, live GPS, and instant transit insurance — one app built for two-wheelers, not cars or household cartons.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="#quote" class="rounded-full bg-ember-500 px-6 py-3 font-semibold text-ink-900 shadow-glow transition hover:-translate-y-0.5">Book doorstep pickup</a>
+          <a href="#track" class="rounded-full border border-white/15 px-6 py-3 font-semibold text-white hover:bg-white/5">Live tracking demo</a>
+        </div>
+        <dl class="mt-10 grid grid-cols-3 gap-4 text-center md:text-left">
+          <div>
+            <dt class="text-xs uppercase tracking-wider text-slate-500">Cities</dt>
+            <dd class="font-display text-2xl font-bold text-white"><span data-count="48">0</span>+</dd>
+          </div>
+          <div>
+            <dt class="text-xs uppercase tracking-wider text-slate-500">On-time</dt>
+            <dd class="font-display text-2xl font-bold text-white"><span data-count="97">0</span>%</dd>
+          </div>
+          <div>
+            <dt class="text-xs uppercase tracking-wider text-slate-500">Insured</dt>
+            <dd class="font-display text-2xl font-bold text-white">Every ride</dd>
+          </div>
+        </dl>
+      </div>
+      <div class="relative reveal delay-200">
+        <div class="phone-frame mx-auto max-w-sm">
+          <div class="rounded-[2rem] border border-white/10 bg-ink-800 p-5 shadow-glow">
+            <div class="flex items-center justify-between text-xs text-slate-400">
+              <span>MotoShift · Live</span>
+              <span class="pulse-dot">GPS locked</span>
+            </div>
+            <div class="mt-4 overflow-hidden rounded-2xl bg-ink-900">
+              <svg id="map-svg" viewBox="0 0 320 180" class="h-44 w-full">
+                <defs>
+                  <linearGradient id="route" x1="0" x2="1">
+                    <stop offset="0%" stop-color="#f97316" />
+                    <stop offset="100%" stop-color="#fb923c" />
+                  </linearGradient>
+                </defs>
+                <path d="M20 140 C 80 40, 140 160, 200 70 S 300 40, 300 90" fill="none" stroke="#1e293b" stroke-width="8" />
+                <path id="route-path" d="M20 140 C 80 40, 140 160, 200 70 S 300 40, 300 90" fill="none" stroke="url(#route)" stroke-width="3" stroke-dasharray="6 8" />
+                <circle id="bike-dot" cx="20" cy="140" r="7" fill="#f97316" />
+              </svg>
+            </div>
+            <div class="mt-4 flex items-center justify-between rounded-xl bg-white/5 px-3 py-3">
+              <div>
+                <p class="text-xs text-slate-500">Bengaluru → Hyderabad</p>
+                <p class="font-medium text-white">Royal Enfield Classic 350</p>
+              </div>
+              <p class="text-right text-xs text-ember-400">ETA 11h<br /><span class="text-slate-400">NH44 hub</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="gap" class="border-t border-white/5 bg-ink-800/60 py-20">
+    <div class="mx-auto max-w-6xl px-5">
+      <p class="reveal text-xs uppercase tracking-[0.25em] text-ember-400">Project case study</p>
+      <h2 class="reveal mt-3 max-w-3xl font-display text-3xl font-bold text-white md:text-4xl">The market still has no unified two-wheeler solution.</h2>
+      <blockquote class="reveal mt-8 max-w-4xl border-l-2 border-ember-500 pl-6 text-lg leading-relaxed text-slate-300">
+        While platforms like Porter, MoveMyCar, and Indian Railways Parcel currently exist in the market, there is still a gap for a single, unified solution focused specifically on two-wheelers. Existing services either require manual station drop-offs or lack transparent live tracking. <span class="text-white">MotoShift</span> solves this by providing an end-to-end service featuring Doorstep Pickup, Digital Pre-Inspection (360° vehicle condition capture), Real-Time GPS Tracking, and Instant Transit Insurance all inside one mobile application.
+      </blockquote>
+    </div>
+  </section>
+  <section id="features" class="py-20">
+    <div class="mx-auto max-w-6xl px-5">
+      <div class="flex flex-col justify-between gap-6 md:flex-row md:items-end">
+        <div>
+          <p class="text-xs uppercase tracking-[0.25em] text-ember-400">What we ship</p>
+          <h2 class="mt-3 font-display text-3xl font-bold text-white md:text-4xl">Four pillars. One app.</h2>
+        </div>
+        <p class="max-w-md text-slate-400">Built for scooters, commuters, sports bikes, and EVs — not as an afterthought on a car-carrier marketplace.</p>
+      </div>
+      <div class="mt-12 grid gap-5 md:grid-cols-2">
+        <article class="feature-card reveal group rounded-3xl border border-white/10 bg-gradient-to-br from-white/10 to-transparent p-7">
+          <h3 class="font-display text-xl font-bold text-white">Doorstep pickup</h3>
+          <p class="mt-3 text-slate-400">No railway queues. A verified bike carrier arrives at your gate, scans the booking, and rolls out.</p>
+        </article>
+        <article class="feature-card reveal delay-100 group rounded-3xl border border-white/10 bg-gradient-to-br from-white/10 to-transparent p-7">
+          <h3 class="font-display text-xl font-bold text-white">Digital pre-inspection</h3>
+          <p class="mt-3 text-slate-400">360° condition capture before the bike leaves — scratches, odometer, and accessories logged in the app.</p>
+          <div class="inspection mt-6">
+            <div class="inspection-stage">
+              <svg viewBox="0 0 200 110" class="inspection-bike">
+                <ellipse cx="100" cy="92" rx="70" ry="8" fill="#0b1220" />
+                <g class="bike-spin">
+                  <circle cx="48" cy="78" r="18" fill="none" stroke="#f97316" stroke-width="3" />
+                  <circle cx="148" cy="78" r="18" fill="none" stroke="#f97316" stroke-width="3" />
+                  <path d="M48 78 L90 78 L110 48 L148 78 M90 78 L70 52 H110" fill="none" stroke="#e2e8f0" stroke-width="3" stroke-linecap="round" />
+                </g>
+              </svg>
+            </div>
+            <p class="mt-2 text-center text-xs text-slate-500">360° capture in progress</p>
+          </div>
+        </article>
+        <article class="feature-card reveal delay-150 group rounded-3xl border border-white/10 bg-gradient-to-br from-white/10 to-transparent p-7">
+          <h3 class="font-display text-xl font-bold text-white">Real-time GPS</h3>
+          <p class="mt-3 text-slate-400">Follow the carrier truck, hub scans, and ETA — the transparency railways and many aggregators still skip.</p>
+        </article>
+        <article class="feature-card reveal delay-200 group rounded-3xl border border-white/10 bg-gradient-to-br from-white/10 to-transparent p-7">
+          <h3 class="font-display text-xl font-bold text-white">Instant transit insurance</h3>
+          <p class="mt-3 text-slate-400">Cover activates the moment pickup is confirmed. No separate call to a logistics desk.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+  <section class="border-y border-white/5 py-16">
+    <div class="mx-auto max-w-6xl px-5">
+      <h2 class="font-display text-2xl font-bold text-white">How a shift works</h2>
+      <ol class="mt-10 grid gap-6 md:grid-cols-4">
+        <li class="reveal rounded-2xl bg-ink-800 p-5">
+          <span class="font-display text-ember-400">01</span>
+          <h3 class="mt-2 font-semibold text-white">Book in-app</h3>
+          <p class="mt-2 text-sm text-slate-400">Pickup city, drop city, bike type, preferred date. Fare in minutes.</p>
+        </li>
+        <li class="reveal delay-100 rounded-2xl bg-ink-800 p-5">
+          <span class="font-display text-ember-400">02</span>
+          <h3 class="mt-2 font-semibold text-white">Inspect at door</h3>
+          <p class="mt-2 text-sm text-slate-400">Partner captures a 360° walkaround. You approve the condition report.</p>
+        </li>
+        <li class="reveal delay-150 rounded-2xl bg-ink-800 p-5">
+          <span class="font-display text-ember-400">03</span>
+          <h3 class="mt-2 font-semibold text-white">Track the truck</h3>
+          <p class="mt-2 text-sm text-slate-400">GPS + hub pings on a dedicated bike carrier, not a mixed household load.</p>
+        </li>
+        <li class="reveal delay-200 rounded-2xl bg-ink-800 p-5">
+          <span class="font-display text-ember-400">04</span>
+          <h3 class="mt-2 font-semibold text-white">Doorstep drop</h3>
+          <p class="mt-2 text-sm text-slate-400">Receiver verifies the same inspection photos. Insurance stays live until handover.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+  <section id="competitors" class="py-20">
+    <div class="mx-auto max-w-6xl px-5">
+      <p class="text-xs uppercase tracking-[0.25em] text-ember-400">Existing platforms</p>
+      <h2 class="mt-3 font-display text-3xl font-bold text-white md:text-4xl">Where the field sits today</h2>
+      <p class="mt-4 max-w-2xl text-slate-400">Popular options already move vehicles. None combine bike-only focus with doorstep + live GPS + instant cover.</p>
+      <div class="mt-10 grid gap-5 md:grid-cols-2">
+        {% for c in competitors %}
+        <article class="reveal rounded-3xl border border-white/10 p-6 transition hover:border-ember-500/50">
+          <h3 class="font-display text-xl font-bold text-white">{{ c.name }}</h3>
+          <p class="mt-1 text-sm text-ember-400">{{ c.focus }}</p>
+          <p class="mt-3 text-sm leading-relaxed text-slate-400">{{ c.note }}</p>
+          <ul class="mt-4 flex flex-wrap gap-2">
+            {% for gap in c.gaps %}
+            <li class="rounded-full bg-white/5 px-3 py-1 text-xs text-slate-300">{{ gap }}</li>
+            {% endfor %}
+          </ul>
+        </article>
+        {% endfor %}
+      </div>
+      <div class="mt-12 overflow-x-auto reveal">
+        <table class="w-full min-w-[720px] text-left text-sm">
+          <thead>
+            <tr class="border-b border-white/10 text-slate-500">
+              <th class="py-3 pr-4 font-medium">Capability</th>
+              <th class="py-3 pr-4">Railways Parcel</th>
+              <th class="py-3 pr-4">Porter / NoBroker</th>
+              <th class="py-3 pr-4">MoveMyCar / Gati</th>
+              <th class="py-3 pr-4">VRL / Agrim</th>
+              <th class="py-3 text-ember-400">MotoShift</th>
+            </tr>
+          </thead>
+          <tbody class="text-slate-300">
+            <tr class="border-b border-white/5">
+              <td class="py-3 pr-4 text-white">Two-wheeler focused</td>
+              <td class="pr-4">Partial</td><td class="pr-4">No</td><td class="pr-4">Shared</td><td class="pr-4">Shared</td><td class="font-semibold text-ember-400">Yes</td>
+            </tr>
+            <tr class="border-b border-white/5">
+              <td class="py-3 pr-4 text-white">Doorstep pickup</td>
+              <td class="pr-4">Station only</td><td class="pr-4">City moves</td><td class="pr-4">Varies</td><td class="pr-4">Often depot</td><td class="font-semibold text-ember-400">Always</td>
+            </tr>
+            <tr class="border-b border-white/5">
+              <td class="py-3 pr-4 text-white">360° digital inspection</td>
+              <td class="pr-4">Paper</td><td class="pr-4">Limited</td><td class="pr-4">Photos</td><td class="pr-4">Manual</td><td class="font-semibold text-ember-400">In-app</td>
+            </tr>
+            <tr class="border-b border-white/5">
+              <td class="py-3 pr-4 text-white">Live GPS</td>
+              <td class="pr-4">No</td><td class="pr-4">Mixed</td><td class="pr-4">Limited</td><td class="pr-4">Ops desk</td><td class="font-semibold text-ember-400">Realtime</td>
+            </tr>
+            <tr>
+              <td class="py-3 pr-4 text-white">Instant insurance</td>
+              <td class="pr-4">Optional</td><td class="pr-4">Add-on</td><td class="pr-4">Varies</td><td class="pr-4">Separate</td><td class="font-semibold text-ember-400">On pickup</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+  <section id="track" class="border-t border-white/5 bg-ink-800/60 py-20">
+    <div class="mx-auto grid max-w-6xl gap-10 px-5 md:grid-cols-2">
+      <div>
+        <p class="text-xs uppercase tracking-[0.25em] text-ember-400">Transparent tracking</p>
+        <h2 class="mt-3 font-display text-3xl font-bold text-white">See the bike, not a black box.</h2>
+        <p class="mt-4 text-slate-400">Try demo ID <button type="button" id="fill-demo" class="rounded bg-white/10 px-2 py-0.5 font-mono text-ember-400">MOT-48291</button></p>
+        <form id="track-form" class="mt-6 flex gap-3">
+          <input id="track-id" name="id" maxlength="20" class="w-full rounded-xl border border-white/10 bg-ink-900 px-4 py-3 text-sm outline-none focus:border-ember-400" placeholder="Tracking ID" />
+          <button class="rounded-xl bg-ember-500 px-5 font-semibold text-ink-900">Track</button>
+        </form>
+        <div id="track-result" class="mt-6 hidden rounded-2xl border border-white/10 p-5"></div>
+      </div>
+      <div class="reveal">
+        <div class="h-full rounded-3xl border border-white/10 bg-ink-900 p-6">
+          <p class="text-sm text-slate-500">Live route visualisation</p>
+          <div class="mt-4 h-2 overflow-hidden rounded-full bg-white/10">
+            <div id="progress-bar" class="h-full w-[8%] rounded-full bg-ember-500 transition-all duration-700"></div>
+          </div>
+          <ul class="mt-8 space-y-4 text-sm" id="track-steps">
+            <li class="flex gap-3"><span class="mt-1 h-2 w-2 rounded-full bg-ember-500"></span> Booked & insured</li>
+            <li class="flex gap-3 text-slate-500"><span class="mt-1 h-2 w-2 rounded-full bg-white/20"></span> Doorstep pickup</li>
+            <li class="flex gap-3 text-slate-500"><span class="mt-1 h-2 w-2 rounded-full bg-white/20"></span> In transit</li>
+            <li class="flex gap-3 text-slate-500"><span class="mt-1 h-2 w-2 rounded-full bg-white/20"></span> Out for delivery</li>
+            <li class="flex gap-3 text-slate-500"><span class="mt-1 h-2 w-2 rounded-full bg-white/20"></span> Delivered</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="quote" class="py-20">
+    <div class="mx-auto grid max-w-6xl gap-12 px-5 md:grid-cols-2">
+      <div>
+        <h2 class="font-display text-3xl font-bold text-white md:text-4xl">Get a fare in one request.</h2>
+        <p class="mt-4 text-slate-400">Django stores every quote in admin so you can show a real backend in your presentation — not a static form.</p>
+        <ul class="mt-8 space-y-3 text-sm text-slate-300">
+          {% for city in cities %}
+          <li class="inline-block mr-2 mb-2 rounded-full border border-white/10 px-3 py-1">{{ city }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+      <form id="quote-form" method="post" action="{% url 'quote' %}" class="rounded-3xl border border-white/10 bg-white p-6 text-slate-800">
+        {% csrf_token %}
+        <div class="grid gap-4 sm:grid-cols-2">
+          <label class="text-xs font-medium text-slate-500">Name {{ form.name }}</label>
+          <label class="text-xs font-medium text-slate-500">Phone {{ form.phone }}</label>
+          <label class="text-xs font-medium text-slate-500 sm:col-span-2">Email {{ form.email }}</label>
+          <label class="text-xs font-medium text-slate-500">Pickup {{ form.pickup_city }}</label>
+          <label class="text-xs font-medium text-slate-500">Drop {{ form.drop_city }}</label>
+          <label class="text-xs font-medium text-slate-500">Bike type {{ form.bike_type }}</label>
+          <label class="text-xs font-medium text-slate-500">Pickup date {{ form.pickup_date }}</label>
+          <label class="text-xs font-medium text-slate-500 sm:col-span-2">Notes {{ form.notes }}</label>
+        </div>
+        <button class="mt-5 w-full rounded-xl bg-ink-900 py-3 font-semibold text-white transition hover:bg-ember-600">Request quote</button>
+        <p id="quote-msg" class="mt-3 hidden text-sm"></p>
+      </form>
+    </div>
+  </section>
+</main>
+<footer class="border-t border-white/10 py-10 text-center text-sm text-slate-500">
+  <p class="font-display text-white">MotoShift</p>
+  <p class="mt-2">Two-wheeler transport for India. Presentation prototype — Django + Tailwind + JS.</p>
+</footer>
+{% endblock %}

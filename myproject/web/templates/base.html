@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{% block title %}MotoShift — Doorstep two-wheeler transport{% endblock %}</title>
+  <meta name="description" content="MotoShift is India's unified two-wheeler shifting app: doorstep pickup, 360° digital inspection, live GPS, and instant transit insurance." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ember: { 400: "#ff8a3d", 500: "#f97316", 600: "#ea580c", 700: "#c2410c" },
+            ink: { 900: "#070b14", 800: "#0f1624", 700: "#1a2333" },
+          },
+          fontFamily: {
+            sans: ["Outfit", "ui-sans-serif", "system-ui", "sans-serif"],
+            display: ["Syne", "Outfit", "sans-serif"],
+          },
+          boxShadow: {
+            glow: "0 0 80px rgba(249, 115, 22, 0.28)",
+          },
+        },
+      },
+    };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="{% static 'css/app.css' %}" />
+</head>
+<body class="bg-ink-900 text-slate-200 antialiased">
+  <div class="noise" aria-hidden="true"></div>
+  {% block body %}{% endblock %}
+  <script src="{% static 'js/app.js' %}"></script>
+</body>
+</html>
